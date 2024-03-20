@@ -1,7 +1,7 @@
 import React from "react";
-import Wrapper from "../wrappers/AddCustomerForm";
+import Wrapper from "../wrappers/AddCustomerWrapper";
 
-const AddCustomerForm = () => {
+const AddCustomerComponent = () => {
   return (
     <>
       <Wrapper>
@@ -28,4 +28,4 @@ const AddCustomerForm = () => {
   );
 };
 
-export default AddCustomerForm;
+export default AddCustomerComponent;

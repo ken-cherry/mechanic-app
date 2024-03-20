@@ -1,13 +1,30 @@
 import "./App.css";
-import AddCustomerForm from "./components/AddCustomerForm";
-import Navbar from "./components/Navbar";
+import { Route, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Hero, Layout, Customers } from "./pages";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Hero />,
+      },
+      {
+        path: "customers",
+        element: <Customers />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
     <>
-      {/* <h1>Mechanic App</h1> */}
-      <Navbar />
-      <AddCustomerForm />
+      <main>
+        <RouterProvider router={router} />
+      </main>
     </>
   );
 }

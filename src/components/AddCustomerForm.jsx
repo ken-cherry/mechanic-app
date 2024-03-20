@@ -1,9 +1,10 @@
 import React from "react";
+import Wrapper from "../wrappers/AddCustomerForm";
 
 const AddCustomerForm = () => {
   return (
     <>
-      <form>
+      <Wrapper>
         <h5>Add Customer Form</h5>
         <div className="form-control">
           <div className="customer">
@@ -22,7 +23,7 @@ const AddCustomerForm = () => {
             </button>
           </div>
         </div>
-      </form>
+      </Wrapper>
     </>
   );
 };
